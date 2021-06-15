@@ -1,0 +1,25 @@
+{%load static %}
+<html>
+<head><link rel="stylesheet" href="{%static 'shoots/css/shootsfrom.css' %}">
+  <style>
+
+  </style>
+</head>
+<body>
+<div class="contact-us">
+  <form action="shoots/getrequest" method="post">
+    {% csrf_token %}
+    <label for="customerName">NAME <em>&#x2a;</em></label><input id="customerName" name="customerName" required="" type="text" />
+    <label for="customerEmail">EMAIL <em>&#x2a;</em></label><input id="customerEmail" name="customerEmail" required="" type="email" />
+    <label for="customerPhone">PHONE</label><input id="customerPhone" name="customerPhone"  required="" type="tel" />
+    <label for="pincode">PINCODE</label><input id="pincode" name="pincode"  required="" type="text" />
+    <label for="address">ADDRESS <em>&#x2a;</em></label><textarea id="address" name="address"required="" rows="4"></textarea>
+    <h3>
+      Please provide all the information,we will call you as soon as possible.
+    </h3>
+
+    <button id="customerOrder" type="submit">SUBMIT</button>
+  </form>
+</div>
+</body>
+</html>
