@@ -6,6 +6,6 @@ urlpatterns = [
     path('sell',selling),
     path('aboutus',aboutus),
     path ('aboutus/getintouch',getinTouch),
-
+    path('adminhome',adminhome),
 
 ]

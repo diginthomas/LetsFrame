@@ -22,4 +22,4 @@ urlpatterns = [
     path('',include('Home.route')),
     path('frames',include('frames.routes')),
     path('shoots',include('Shoots.routes')),
-]
+    ]

@@ -21,3 +21,7 @@ def getinTouch(req):
     getinTouch.save()
     return redirect('/')
 
+
+def adminhome(request):
+    return render(request,'adminhome.html')
+

@@ -1,0 +1,30 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin-home</title>
+    <link rel="stylesheet" href="{%static 'css/adminhome.css' %}">
+   <script type="text/javascript">
+  function cinfirm()
+  {let a= confirm("Do you want to logout ?");
+  if(a == true){
+  return true;}
+  else{
+    return false;
+  }
+  }</script>
+  </head>
+  <body bgcolor="#CDD5B">
+<div class="container">
+ <a href="/admin-courses"> <button class="btn btn3">Orders</button></a>
+ <a href="/admin-events"> <button class="btn btn3"> Posters</button></a>
+<a href="/admin-application">  <button class="btn btn3">Applications</button></a>
+ <a href="/admin-subscribers"> <button class="btn btn4">Subscribers</button></a>
+ <a href="/admin/logout"> <button onclick="return confirm()" class="btn btn4">logout</button>
+
+
+
+</div>
+  </body>
+</html>
