@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<div>
+<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+
+   <a class="navbar-brand" href="admin/home">Admin Home</a>
+
+  </div>
+</nav>
+
+
+
+
+
+
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">All Applications</h1>
+    <p class="lead">you can View or delete applications</p>
+  </div>
+</div>
+
+
+<div>
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">phnumber</th>
+      <th scope="col">Address</th>
+      <th scope="col">Email</th>
+      <th scope="col">Pincode</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for shoot in shoot %}
+    <tr>
+      <th scope="row">{{shoot.Name}}</th>
+      <td>{{shoot.Phonenumber}}</td>
+      <td>{{shoot.Address}}</td>
+      <td>{{shoot.Email}}</td>
+      <td>{{shoot.Pincode}}</td>
+    </tr>
+       <tr>
+      <td> <a href="" class="btn btn-primary">View</a></td>
+      <td> <form action="/">
+      @csrf
+      <td> <input type="submit"  class="btn btn-warning" value="Delete"></td>
+       <td> </td>
+      </form></td>
+    
+    </tr>
+{% endfor %}
+  </tbody>
+</table></div>
+</body>
+</html>

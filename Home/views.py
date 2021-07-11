@@ -21,7 +21,14 @@ def getinTouch(req):
     getinTouch.save()
     return redirect('/')
 
+def showallsubscribers(request):
+    getinTouch= GetinTouch.objects.all()
+    return render(request,'adminsubscribers.html',{'getintouch':getinTouch})
+
+
 
 def adminhome(request):
     return render(request,'adminhome.html')
 
+def price(request):
+    return render(request, 'pricing.html')

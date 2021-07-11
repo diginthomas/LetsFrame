@@ -14,3 +14,7 @@ def get_shoots_Req(request):
      shoot.save()
      return redirect('/')
 
+
+def showreq(request):
+    shoot= ShootsReq.objects.all()
+    return render(request,'adminreq.html',{'shoot':shoot})

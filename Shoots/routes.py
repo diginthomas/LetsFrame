@@ -4,6 +4,8 @@ from.views import *
 urlpatterns = [
       path('',shootsplan),
       path('/getrequest',get_shoots_Req ),
+      path('/showreq',showreq),
+      
 
 
     ]
