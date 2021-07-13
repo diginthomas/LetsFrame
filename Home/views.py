@@ -32,3 +32,7 @@ def adminhome(request):
 
 def price(request):
     return render(request, 'pricing.html')
+
+
+def login(request):
+     return render(request,'login.html')   

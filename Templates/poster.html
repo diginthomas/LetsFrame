@@ -1,0 +1,31 @@
+{%load static%}
+<html lang="en">
+
+<head>
+  <title>Posters</title>
+   <link rel="stylesheet" href="{%static 'css/poster.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+</head>
+
+<body>
+ {%for poster in poster%}
+  <div class="wrapper">
+    <div class="product-img">
+      <img src={{poster.PosterImageURL}} height="420" width="327">
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1>{{poster.PosterName}}</h1>
+        <h2>by LETSFRAME</h2>
+        <p>{{poster.PosterDesc}}<br> <b>Size:{{poster.PosterSize}}</b><br> 
+      </div>
+      <div class="product-price-btn">
+        <p>₹<span>{{poster.PosterPrice}}</span></p>
+        <button type="button">buy now</button>
+      </div>
+    </div>
+  </div>{% endfor%}
+
+</body>
+
+</html>

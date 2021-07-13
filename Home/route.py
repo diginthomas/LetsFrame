@@ -9,5 +9,6 @@ urlpatterns = [
     path('adminhome',adminhome),
     path('pricing',price),
     path('admin/showsub',showallsubscribers),
+    path('login',login),
 
 ]
